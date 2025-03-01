@@ -1,0 +1,208 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#filter {
+  width: 100%;
+  max-width: 600px;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 8px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#rating-stars {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+
+#rating-stars i {
+  font-size: 24px;
+  color: #ddd;
+  margin-right: 5px;
+  transition: color 0.3s ease;
+}
+
+#rating-stars i.selected {
+  color: #f39c12;
+}
+
+button {
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#output {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  max-height: 710px;
+  overflow-y: auto;
+}
+
+#recommendations-container {
+  margin-top: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  max-height: 710px;
+  overflow-y: auto;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0px auto;
+  font-size: 16px;
+  text-align: left;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+th {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+table thead th {
+  background-color: #007bff;
+  color: #ffffff;
+  border: 1px solid #84aed6;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+  background-color: #e6f7ff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+  }
+
+  #filter {
+    width: 100%;
+    max-width: none;
+  }
+
+  form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #rating-stars i {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 12px 15px;
+    font-size: 18px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  #output,
+  #recommendations-container {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  #rating-stars i {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px 10px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 6px;
+  }
+}
